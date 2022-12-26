@@ -45,7 +45,11 @@ class TituloBancarioModel(BaseModel):
         description="Valor del titulo bancario",
         example="360000000"
     )
-    FechaCreacion: date = date.today()
+    FechaCreacion: date = Field(
+        ...,
+        description="Fecha de vencimiento del titulo bancario",
+        example="2022-01-25"
+    )
     FechaVencimiento: date = Field(
         ...,
         description="Fecha de vencimiento del titulo bancario",
